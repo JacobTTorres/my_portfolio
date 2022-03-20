@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mr+Dafoe&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: var(--dark-grey);
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+h4 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+:root {
+	/* display size */
+	--desktop: 1440px;
+	--mobile: 375px;
+
+	/* colors */
+	--primary: rgb(207, 214, 214);
+	--blueish-grey: rgb(127, 163, 165);
+	--light-blue-grey: rgb(160, 187, 188);
+	--light-grey: rgb(147, 159, 159);
+	--dark-grey: rgb(127, 140, 141);
+	--accent-color: rgb(214, 168, 51);
+
+	/* typography */
+	--header-font: 'Merriweather', serif;
+	--info-font: 'Roboto Slab', serif;
+	--logo-font: 'Mr Dafoe', cursive;
+}
+
+/* app css */
+.App {
+	height: 100%;
+	width: var(--desktop);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 3px 20px 15px #00000079;
+	position: relative;
+}
+
+.appContent {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.appHeader {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@media only screen and (max-width: 1440px) {
+	.App {
+		width: 100vw;
+		height: 100%;
+	}
+}
+
+/* navbar css */
+.navbarContainer {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+
+.navbarContent {
+	height: 100%;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.5vw 0 1.5vw 0;
+}
+
+.logoContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	font-family: var(--logo-font);
+	font-weight: 300;
+	font-size: 30px;
+	margin: 0;
+}
+
+.navLinkContainer {
+	width: 38%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navLink {
+	color: #000;
+}
+
+.navLink:hover {
+	color: var(--accent-color);
+	border-bottom: var(--accent-color) 2px solid;
+}
+
+/* header css */
+.headerContainer {
+	width: 100%;
+	height: 40vw;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 5vw 0vw 5vw 0vw;
+	position: relative;
+}
+
+.headerContent {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.middleContainer {
+	width: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.middleHeader {
+	text-align: center;
+	font-family: var(--header-font);
+	font-size: 2vw;
+}
+
+.myPicture,
+.loopStudioPic {
+	width: 40vw;
+	height: 20vw;
+	position: absolute;
+	top: 15vw;
+}
+
+.myPicture {
+	z-index: 2;
+}
+
+.loopStudioPic {
+	z-index: 1;
+}
+
+.myPicture:hover {
+	animation-name: codeMove;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes codeMove {
+	from {
+		top: 15vw;
+	}
+	50% {
+		transform: translatex(-25vw) translatey(-5vw);
+	}
+	to {
+		top: 15vw;
+		z-index: 1;
+	}
+}
+
+@media only screen and (min-width: 1367px) {
+	.emailBreak {
+		display: none;
+	}
+}
+/* mySkills css */
+.mySkillsContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.mySkillsContent {
+	width: 90%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: 5vw 0 5vw 0;
+}
+
+.skillHeader {
+	font-family: var(--header-font);
+	background-color: var(--blueish-grey);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 1vw 1.5vw 1vw 1vw;
+	box-shadow: 1px 10px 15px #00000079;
+	border-radius: 0 0.2vw 0.2vw 0;
+}
+
+.skillContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 57.6px 0vw 0vw 0vw;
+}
+
+.skill {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.skillPhoto,
+.skillPhotoJs {
+	margin-bottom: 2vw;
+}
+
+.skillPhoto {
+	width: 5vw;
+	height: 5vw;
+}
+
+.skillPhotoJs {
+	width: 8vw;
+	height: 5vw;
+}
+
+.skillInfo {
+	font-family: var(--info-font);
+	text-align: center;
+	width: 80%;
+}
+
+/* projects css */
+.projectContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.projectContent {
+	width: 90%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: 5vw 0 5vw 0;
+}
+
+.projectHeader {
+	font-family: var(--header-font);
+	background-color: var(--blueish-grey);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 1vw 1.5vw 1vw 1vw;
+	box-shadow: 1px 10px 15px #00000079;
+	border-radius: 0 0.2vw 0.2vw 0;
+}
+
+.projectContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 57.6px 0vw 0vw 0vw;
+}
+
+.project {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.projectPhoto,
+.projectPhotoJs {
+	margin-bottom: 2vw;
+}
+
+.projectImg {
+	width: 35vw;
+	height: 20vw;
+	transition: width 0.5s, height 0.5s, box-shadow 0.5s;
+	border-radius: 0.25vw;
+}
+
+.projectImg:hover {
+	width: 40vw;
+	height: 25vw;
+	box-shadow: 1px 10px 10px #00000079;
+}
+
+.projectInfo {
+	font-family: var(--info-font);
+	text-align: center;
+	width: 80%;
+}
+
+/* footer css */
+.footerContainer {
+	background-color: var(--dark-grey);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footerContent {
+	width: 90%;
+	height: 100%;
+	padding: 1vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+
+.contactContainer {
+	width: 25%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.icon,
+.iconGithub {
+	margin-right: 10px;
+}
+
+.icon {
+	width: 2vw;
+	height: 2vw;
+	color: #000;
+}
+
+.iconGithub {
+	width: 2vw;
+	height: 2vw;
+}
+
+.contacts {
+	font-family: var(--info-font);
+	color: #fff;
+}
+
+a {
+	color: #fff;
+}
+
+.dropbtn {
+	background-color: var(--primary);
+	color: white;
+	border: none;
+}
+
+.dropdown {
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--primary);
+	z-index: 1;
+	top: 3;
+	left: 0;
+	width: 100%;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dropdown-content a:hover {
+	background-color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: var(--primary);
+}
+
+@media only screen and (max-width: 900px) {
+	.logo {
+		font-size: 4vw;
+	}
+	.navLinkContainer {
+		width: 60%;
+	}
+	.middleHeader {
+		margin-top: 40px;
+	}
+	.skillInfo {
+		font-size: 1.75vw;
+	}
+	.footerContent {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (min-width: 502px) {
+	.dropdown {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.navLinkContainer {
+		display: none;
+		width: 100%;
+		height: 20px;
+	}
+
+	.navbarContent {
+		height: 10px;
+	}
+
+	.headerContainer {
+		height: 45vw;
+	}
+	.loopStudioPic,
+	.myPicture {
+		top: 20vw;
+	}
+
+	@keyframes codeMove {
+		from {
+			top: 20vw;
+		}
+		50% {
+			transform: translatex(-30vw) translatey(-5vw);
+		}
+		to {
+			top: 20vw;
+			z-index: 1;
+		}
+	}
+
+	.skillContainer {
+		flex-direction: column;
+	}
+	.skillHeader,
+	.projectHeader {
+		width: 30%;
+	}
+	.skill {
+		width: 80%;
+	}
+
+	.skillPhoto {
+		width: 10vw;
+		height: 10vw;
+	}
+
+	.skillPhotoJs {
+		width: 15vw;
+		height: 10vw;
+	}
+
+	.skillInfo {
+		width: 100%;
+		font-size: 3vw;
+	}
+	.footerContent {
+		flex-direction: column;
+	}
+	.contactContainer {
+		width: 100%;
+	}
+}
