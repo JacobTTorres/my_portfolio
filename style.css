@@ -470,6 +470,14 @@ a {
 	.footerContent {
 		flex-direction: column;
 	}
+	.contactContainer {
+		width: 100%;
+	}
+	.icon,
+	.iconGithub {
+		width: 5vw;
+		height: 5vw;
+	}
 }
 
 @media only screen and (min-width: 502px) {
@@ -540,5 +548,10 @@ a {
 	}
 	.contactContainer {
 		width: 100%;
+	}
+	.icon,
+	.iconGithub {
+		width: 5vw;
+		height: 5vw;
 	}
 }
