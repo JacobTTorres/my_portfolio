@@ -248,7 +248,7 @@ a {
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	flex-direction: row;
 	margin: 57.6px 0vw 0vw 0vw;
 }
