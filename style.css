@@ -55,7 +55,6 @@ a {
 	align-items: center;
 	background-color: #fff;
 	box-shadow: 3px 20px 15px #00000079;
-	position: relative;
 }
 
 .appContent {
@@ -65,6 +64,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
 }
 
 .appHeader {
@@ -85,7 +85,7 @@ a {
 
 /* navbar css */
 .navbarContainer {
-	width: 100%;
+	width: var(--desktop);
 	height: 50px;
 	display: flex;
 	justify-content: center;
@@ -215,17 +215,17 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 }
 
 .mySkillsContent {
-	width: 100%;
+	width: 1440px;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin: 5vw 0 5vw 0;
+	position: relative;
 }
 
 .skillHeader {
@@ -250,7 +250,7 @@ a {
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: row;
-	margin: 57.6px 0vw 0vw 0vw;
+	margin: 20vh 0vw 0vw 0vw;
 }
 
 .skill {
@@ -290,17 +290,18 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
+	
 }
 
 .projectContent {
-	width: 90%;
+	width: 1440px;
 	height: 100%;
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
 	flex-direction: column;
 	margin: 5vw 0 5vw 0;
+	position: relative;
 }
 
 .projectHeader {
@@ -325,7 +326,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin: 57.6px 0vw 0vw 0vw;
+	margin: 20vh 0vw 0vw 0vw;
 }
 
 .project {
@@ -362,15 +363,20 @@ a {
 }
 
 /* footer css */
+#my-contacts{
+	width: 100%;
+}
+
 .footerContainer {
 	background-color: var(--dark-grey);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: var(--desktop);
 }
 
 .footerContent {
-	width: 90%;
+	width: 80%;
 	height: 100%;
 	padding: 1vw;
 	display: flex;
@@ -454,6 +460,12 @@ a {
 	background-color: var(--primary);
 }
 
+@media only screen and (max-width: 1440px){
+	.projectContent,.mySkillsContent,.navbarContainer{
+		width: 100%;
+	}
+}
+
 @media only screen and (max-width: 900px) {
 	.logo {
 		font-size: 4vw;
@@ -528,6 +540,7 @@ a {
 	}
 	.skill {
 		width: 80%;
+		margin: 15px 0 15px 0;
 	}
 
 	.skillPhoto {
@@ -543,6 +556,7 @@ a {
 	.skillInfo {
 		width: 100%;
 		font-size: 3vw;
+		margin: 5px;
 	}
 	.footerContent {
 		flex-direction: column;
@@ -554,5 +568,13 @@ a {
 	.iconGithub {
 		width: 5vw;
 		height: 5vw;
+	}
+
+	.projectContainer,.skillContainer{
+		margin: 10vh 0 0 0;
+	}
+
+	#my-projects{
+		margin-top: 0;
 	}
 }
